@@ -18,14 +18,15 @@ This is the project for UI code of https://www.holo-apollo.art.
   yarn dev
   ```
 
-#### TODO
+## TODO
 
-## Functional stuff
+#### Functional stuff
 
 - Try using react-helmet-async to fix the deprecation warning
 - Upgrade material-ui to v4 (if used)
 
-## Dev stuff
+#### Dev stuff
 
 - Use react-testing-library
 - Use eslint-plugin-react-hooks
+- Upgrade storybook

@@ -88,7 +88,7 @@ const Header = ({ t }: Props) => (
       </MiddleCont>
       <RightCont>
         <OrderButtonCont>
-          <Button>{t('order')}</Button>
+          <Button width={204}>{t('order')}</Button>
         </OrderButtonCont>
         <LanguageSelectCont>
           <LanguageSelect />

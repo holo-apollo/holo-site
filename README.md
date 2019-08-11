@@ -12,9 +12,11 @@ This is the project for UI code of https://www.holo-apollo.art.
   yarn
   ```
 
-#### Internationalization (i18n)
+- Run:
 
-TODO: Use next-i18next
+  ```
+  yarn dev
+  ```
 
 #### TODO
 

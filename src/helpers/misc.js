@@ -6,14 +6,10 @@ export const isServer = !(
   window.document.createElement
 );
 
-export const getEnv = (key: string) =>
-  isServer
-    ? process && process.env
-      ? process.env[key]
-      : ''
-    : window && window.env
-    ? window.env[key]
-    : '';
+export const getEnv = (key: string): string => {
+  if (isServer) return (process && process.env && process.env[key]) || '';
+  return (window && window.env && window.env[key]) || '';
+};
 
 export const capitalize = (input: string): string =>
   input.charAt(0).toUpperCase() + input.slice(1);

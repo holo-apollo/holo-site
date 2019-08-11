@@ -1,7 +1,7 @@
 // @flow
 import { useState } from 'react';
 
-type InputEvent = SyntheticInputEvent<HTMLInputElement>;
+import type { InputEvent } from 'common/types';
 
 type InputBag = { value: string, onChange: InputEvent => void };
 

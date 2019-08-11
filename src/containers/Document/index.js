@@ -39,12 +39,15 @@ class Document extends NextDocument {
       // 'head' was occupied by 'renderPage().head', we cannot use it
       const helmet = Helmet.renderStatic();
 
+      const locale = ctx.req.language;
+
       const initialProps = await NextDocument.getInitialProps(ctx);
 
       return {
         ...initialProps,
         ...page,
         pageContext,
+        locale,
         helmet,
         // Styles fragment is rendered after the app and page rendering finish.
         styles: (
@@ -85,7 +88,7 @@ class Document extends NextDocument {
 
   render() {
     return (
-      <html {...this.helmetHtmlAttrComponents} lang={'uk'}>
+      <html {...this.helmetHtmlAttrComponents} lang={this.props.locale}>
         <Head>
           {process.env.HOST === 'https://www.holo-apollo.art' && (
             <>

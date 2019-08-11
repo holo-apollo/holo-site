@@ -1,12 +1,14 @@
 // @flow
 import React from 'react';
-import Link from 'next/link';
+
+import { Link, withTranslation } from 'common/i18n';
 import { getEnv } from 'helpers/misc';
 import {
   getHomePageLink,
   getGoodsLink,
   getApplicationLink,
 } from 'helpers/urls';
+import LanguageSelect from 'common/components/inputs/LanguageSelect';
 import {
   Cont,
   ContentCont,
@@ -18,13 +20,17 @@ import {
   MenuItem,
 } from './styled';
 
-const staticRoot = getEnv('STATIC_ROOT') || '';
+const staticRoot = getEnv('STATIC_ROOT');
 
 const logo3x = `${staticRoot}/img/holo-apollo-logo-transpl@3x.png`;
 const logo2x = `${staticRoot}/img/holo-apollo-logo-transpl@2x.png`;
 const logo1x = `${staticRoot}/img/holo-apollo-logo-transpl.png`;
 
-const Header = () => (
+type Props = {
+  t: Function,
+};
+
+const Header = ({ t }: Props) => (
   <Cont>
     <ContentCont>
       <LeftCont>
@@ -42,19 +48,21 @@ const Header = () => (
         <MenuCont>
           <Link href={getGoodsLink()}>
             <a>
-              <MenuItem isActive={false}>All goods</MenuItem>
+              <MenuItem isActive={false}>{t('allGoods')}</MenuItem>
             </a>
           </Link>
           <Link href={getApplicationLink()}>
             <a>
-              <MenuItem isActive={false}>Application</MenuItem>
+              <MenuItem isActive={false}>{t('application')}</MenuItem>
             </a>
           </Link>
         </MenuCont>
       </MiddleCont>
-      <RightCont />
+      <RightCont>
+        <LanguageSelect />
+      </RightCont>
     </ContentCont>
   </Cont>
 );
 
-export default Header;
+export default withTranslation('common')(Header);

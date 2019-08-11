@@ -1,15 +1,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-const HelmetComponent = () => (
+import { withTranslation } from 'common/i18n';
+
+const HelmetComponent = ({ t }) => (
   <Helmet
     meta={[
       {
         name: 'description',
-        content: 'Holo Apollo description',
+        content: t('siteDescription'),
       },
     ]}
   />
 );
 
-export default HelmetComponent;
+export default withTranslation('common')(HelmetComponent);

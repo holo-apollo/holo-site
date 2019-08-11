@@ -1,6 +1,9 @@
 const express = require('express');
 const next = require('next');
 const { resolve } = require('path');
+const nextI18NextMiddleware = require('next-i18next/middleware').default;
+
+const nextI18next = require('../src/common/i18n').default;
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const host = process.env.HOST || 'http://localhost';
@@ -26,6 +29,8 @@ app
   .prepare()
   .then(() => {
     const server = express();
+
+    server.use(nextI18NextMiddleware(nextI18next));
 
     // The request handler must be the first middleware on the app
     sentryConfigured && server.use(Sentry.Handlers.requestHandler());

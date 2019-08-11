@@ -1,9 +1,9 @@
 // @flow
 import * as React from 'react';
-import Link from 'next/link';
 import { Case } from 'react-case-when';
 import { isEmpty } from 'ramda';
 
+import { Link } from 'common/i18n';
 import { getHomePageLink } from 'helpers/urls';
 import Triangle from 'common/components/icons/Triangle';
 import { Cont, CrumbLink, LastCrumb } from './styled';

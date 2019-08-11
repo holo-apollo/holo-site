@@ -29,6 +29,7 @@ export const MiddleCont = styled.div`
 export const RightCont = styled.div`
   margin-left: 20px;
   display: flex;
+  align-items: center;
 `;
 
 export const Logo = styled.img`

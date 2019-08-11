@@ -1,7 +1,7 @@
 // @flow
 import NextApp, { Container } from 'next/app';
 import Head from 'next/head';
-import React, { Fragment } from 'react';
+import React from 'react';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
@@ -9,15 +9,16 @@ import * as Sentry from '@sentry/browser';
 
 import GlobalStyle from 'common/GlobalStyle';
 import getPageContext from 'helpers/getPageContext';
-import { isServer } from 'helpers/misc';
+import { isServer, getEnv } from 'helpers/misc';
 import HelmetComponent from 'common/components/HelmetComponent';
 import ErrorBoundary from 'common/components/ErrorBoundary';
+import { appWithTranslation } from 'common/i18n';
 
-class App extends NextApp {
+class NotEnhancedApp extends NextApp {
   constructor() {
     super();
     this.pageContext = getPageContext();
-    if (!isServer && window.env.SENTRY_DSN) {
+    if (!isServer && getEnv('SENTRY_DSN')) {
       Sentry.init({
         dsn: window.env.SENTRY_DSN,
       });
@@ -60,12 +61,12 @@ class App extends NextApp {
               theme={this.pageContext.theme}
               sheetsManager={this.pageContext.sheetsManager}
             >
-              <Fragment>
+              <>
                 <CssBaseline />
                 <GlobalStyle />
                 <HelmetComponent />
                 <Component pageContext={this.pageContext} {...pageProps} />
-              </Fragment>
+              </>
             </MuiThemeProvider>
           </JssProvider>
         </ErrorBoundary>
@@ -73,5 +74,7 @@ class App extends NextApp {
     );
   }
 }
+
+const App = appWithTranslation(NotEnhancedApp);
 
 export default App;

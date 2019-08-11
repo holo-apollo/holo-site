@@ -9,18 +9,29 @@ import FieldWithError from '../FieldWithError';
 
 type Props = {
   options: SelectOption<any>[],
-  label: string,
+  label?: string,
   errorText?: string,
+  defaultValue: string,
+  withEmptyOption: boolean,
 };
 
-const Select = ({ label, options, errorText, ...rest }: Props) => (
+const Select = ({
+  label,
+  options,
+  errorText,
+  defaultValue,
+  withEmptyOption,
+  ...rest
+}: Props) => (
   <FieldWithError errorText={errorText}>
     <FormControl fullWidth={true} error={Boolean(errorText)}>
-      <InputLabel error={Boolean(errorText)} style={{ fontSize: 12 }}>
-        {label}
-      </InputLabel>
-      <SelectMaterial native={true} defaultValue={''} {...rest}>
-        <option value={''} disabled={true} />
+      {label && (
+        <InputLabel error={Boolean(errorText)} style={{ fontSize: 12 }}>
+          {label}
+        </InputLabel>
+      )}
+      <SelectMaterial native={true} defaultValue={defaultValue} {...rest}>
+        {withEmptyOption && <option value={''} disabled={true} />}
         {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.label}
@@ -30,5 +41,10 @@ const Select = ({ label, options, errorText, ...rest }: Props) => (
     </FormControl>
   </FieldWithError>
 );
+
+Select.defaultProps = {
+  defaultValue: '',
+  withEmptyOption: true,
+};
 
 export default Select;

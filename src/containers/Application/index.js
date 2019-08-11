@@ -1,7 +1,19 @@
+// @flow
 import React from 'react';
 
 import Layout from 'containers/Layout';
+import { withTranslation } from 'common/i18n';
 
-const Application = () => <Layout>Application page</Layout>;
+type Props = {
+  t: Function,
+};
 
-export default Application;
+const Application = ({ t }: Props) => {
+  return <Layout>{t('applicationPage')}</Layout>;
+};
+
+Application.getInitialProps = async () => ({
+  namespacesRequired: ['common', 'application'],
+});
+
+export default withTranslation('application')(Application);

@@ -1,20 +1,28 @@
 // @flow
 import React from 'react';
-import Link from 'next/link';
 
+import { withTranslation, Link } from 'common/i18n';
 import { getGoodsLink, getGoodPageLink } from 'helpers/urls';
 import Layout from 'containers/Layout';
 
-const GoodsPage = () => (
-  <Layout crumbs={[{ message: 'Goods', link: getGoodsLink() }]}>
+type Props = {
+  t: Function,
+};
+
+const GoodsPage = ({ t }: Props) => (
+  <Layout crumbs={[{ message: t('goods'), link: getGoodsLink() }]}>
     {[1, 2, 3, 4, 5].map(goodId => (
       <div key={goodId}>
         <Link href={getGoodPageLink(goodId)}>
-          <a>Good {goodId}</a>
+          <a>{t('good', { goodId })}</a>
         </Link>
       </div>
     ))}
   </Layout>
 );
 
-export default GoodsPage;
+GoodsPage.getInitialProps = async () => ({
+  namespacesRequired: ['common', 'goods'],
+});
+
+export default withTranslation('goods')(GoodsPage);

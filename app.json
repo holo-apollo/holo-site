@@ -1,0 +1,32 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "description": "UI for Holo Apollo site",
+  "env": {
+    "CMS_API_ROOT": {
+      "required": true
+    },
+    "CRM_API_ROOT": {
+      "required": true
+    },
+    "NODE_ENV": {
+      "required": true
+    },
+    "SERVE_STATIC": "True"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "holo-site",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}

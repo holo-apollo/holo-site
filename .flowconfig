@@ -1,0 +1,13 @@
+[ignore]
+
+[include]
+src
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper='^\(lib\|common\|helpers\|containers\|store\)\/\(.*\)$' -> '<PROJECT_ROOT>/src/\1/\2'
+
+[strict]

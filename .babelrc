@@ -1,0 +1,21 @@
+{
+  "presets": [
+    "next/babel",
+    "@babel/preset-flow"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    [
+      "styled-components",
+      {
+        "ssr": true
+      }
+    ]
+  ]
+}

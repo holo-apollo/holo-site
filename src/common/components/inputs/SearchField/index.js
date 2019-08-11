@@ -10,11 +10,6 @@ import useInput from 'common/hooks/useInput';
 const Cont = styled.div`
   input {
     font-size: 12px;
-    font-weight: 300;
-
-    &::placeholder {
-      font-style: italic;
-    }
   }
 `;
 

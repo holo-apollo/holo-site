@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import palette from 'common/palette';
+import { Montserrat } from 'common/fonts';
 
 const getButtonProps = ({ width, height, color, fontSize, fontWeight }) => css`
   width: ${width}px;
@@ -52,7 +53,7 @@ const getHoverProps = ({ hoverColor }) => css`
 `;
 
 const StyledButton = styled.button`
-  font-weight: 500;
+  font-family: ${Montserrat};
   text-align: center;
   color: ${palette.white};
   cursor: pointer;
@@ -73,12 +74,12 @@ const StyledButton = styled.button`
 const Button = props => <StyledButton {...props} />;
 
 Button.defaultProps = {
-  color: palette.darkGrey,
+  color: palette.black,
   hoverColor: palette.blue,
   height: 35,
   width: 250,
-  fontSize: 14,
-  fontWeight: '500',
+  fontSize: 12,
+  fontWeight: '600',
 };
 
 export default Button;

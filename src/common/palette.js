@@ -1,4 +1,5 @@
 export default {
+  // old colors
   red: '#f44336',
   darkEvening: '#3c4160',
   evening: '#606583',
@@ -12,4 +13,7 @@ export default {
   lightGrey: '#a7a7a7',
   lightestGrey: '#e3e3e3',
   white: '#ffffff',
+
+  // new colors
+  black: '#161616',
 };

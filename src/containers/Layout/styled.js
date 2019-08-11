@@ -11,17 +11,6 @@ export const HeaderCont = styled.div`
   background-color: ${palette.white};
 `;
 
-export const BelowHeaderContent = styled.div`
-  flex-grow: 1;
-  display: flex;
-  justify-content: space-between;
-  max-width: 1300px;
-`;
-
-export const SearchCont = styled.div`
-  width: 310px;
-`;
-
 export const MainCont = styled.div`
   margin-top: 100px;
   padding: 0 20px;

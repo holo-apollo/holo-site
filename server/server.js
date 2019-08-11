@@ -45,12 +45,6 @@ app
       res.send('var env = ' + JSON.stringify(env));
     });
 
-    server.get('/goods/:id', function(req, res) {
-      app.render(req, res, '/good', {
-        id: req.params.id,
-      });
-    });
-
     server.get('*', (req, res) => {
       return handle(req, res);
     });

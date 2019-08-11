@@ -1,6 +1,10 @@
 {
   "siteDescription": "Holo Apollo описание",
-  "search": "Поиск...",
-  "allGoods": "Все товары",
-  "application": "Заявка"
+  "workroom": "Мастерская печати и дизайна",
+  "printing": "Печать",
+  "design": "Дизайн",
+  "materials": "Материалы",
+  "prices": "Прайс",
+  "contacts": "Контакты",
+  "order": "Заказать"
 }

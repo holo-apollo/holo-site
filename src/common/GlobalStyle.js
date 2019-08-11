@@ -1,11 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 import palette from 'common/palette';
 
+import { AnonymousPro } from './fonts';
+
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: ${AnonymousPro};
     -webkit-text-size-adjust: none;
-    color: ${palette.darkGrey};
+    color: ${palette.black};
   }
 
   button {

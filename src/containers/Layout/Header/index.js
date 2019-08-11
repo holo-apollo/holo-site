@@ -2,11 +2,15 @@
 import React from 'react';
 
 import { Link, withTranslation } from 'common/i18n';
+import Button from 'common/components/buttons/Button';
 import { getEnv } from 'helpers/misc';
 import {
   getHomePageLink,
-  getGoodsLink,
-  getApplicationLink,
+  getPrintingLink,
+  getDesignLink,
+  getMaterialsLink,
+  getPricesLink,
+  getContactsLink,
 } from 'helpers/urls';
 import LanguageSelect from 'common/components/inputs/LanguageSelect';
 import {
@@ -16,8 +20,13 @@ import {
   MiddleCont,
   RightCont,
   Logo,
+  LeftTextCont,
+  HoloNameCont,
+  HoloDescriptionCont,
   MenuCont,
   MenuItem,
+  OrderButtonCont,
+  LanguageSelectCont,
 } from './styled';
 
 const staticRoot = getEnv('STATIC_ROOT');
@@ -33,33 +42,57 @@ type Props = {
 const Header = ({ t }: Props) => (
   <Cont>
     <ContentCont>
-      <LeftCont>
-        <Link href={getHomePageLink()}>
-          <a>
+      <Link href={getHomePageLink()}>
+        <a>
+          <LeftCont>
             <Logo
               src={logo3x}
               srcSet={`${logo1x}, ${logo2x} 2x, ${logo3x} 3x`}
               alt="logo"
             />
-          </a>
-        </Link>
-      </LeftCont>
+            <LeftTextCont>
+              <HoloNameCont>Holo Apollo Art</HoloNameCont>
+              <HoloDescriptionCont>{t('workroom')}</HoloDescriptionCont>
+            </LeftTextCont>
+          </LeftCont>
+        </a>
+      </Link>
       <MiddleCont>
         <MenuCont>
-          <Link href={getGoodsLink()}>
+          <Link href={getPrintingLink()}>
             <a>
-              <MenuItem isActive={false}>{t('allGoods')}</MenuItem>
+              <MenuItem isActive={false}>{t('printing')}</MenuItem>
             </a>
           </Link>
-          <Link href={getApplicationLink()}>
+          <Link href={getDesignLink()}>
             <a>
-              <MenuItem isActive={false}>{t('application')}</MenuItem>
+              <MenuItem isActive={false}>{t('design')}</MenuItem>
+            </a>
+          </Link>
+          <Link href={getMaterialsLink()}>
+            <a>
+              <MenuItem isActive={false}>{t('materials')}</MenuItem>
+            </a>
+          </Link>
+          <Link href={getPricesLink()}>
+            <a>
+              <MenuItem isActive={false}>{t('prices')}</MenuItem>
+            </a>
+          </Link>
+          <Link href={getContactsLink()}>
+            <a>
+              <MenuItem isActive={false}>{t('contacts')}</MenuItem>
             </a>
           </Link>
         </MenuCont>
       </MiddleCont>
       <RightCont>
-        <LanguageSelect />
+        <OrderButtonCont>
+          <Button>{t('order')}</Button>
+        </OrderButtonCont>
+        <LanguageSelectCont>
+          <LanguageSelect />
+        </LanguageSelectCont>
       </RightCont>
     </ContentCont>
   </Cont>

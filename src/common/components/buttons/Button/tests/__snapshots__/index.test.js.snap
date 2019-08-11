@@ -2,10 +2,10 @@
 
 exports[`Button should match snapshot 1`] = `
 <button
-  className="Button__StyledButton-kpekc2-0 fNiKyE"
-  color="#424242"
-  fontSize={14}
-  fontWeight="500"
+  className="Button__StyledButton-iguee-0 jNrZuC"
+  color="#161616"
+  fontSize={12}
+  fontWeight="600"
   height={35}
   width={250}
 >

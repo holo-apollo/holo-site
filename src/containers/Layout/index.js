@@ -1,50 +1,24 @@
 // @flow
-import React, { type Node, type ElementConfig } from 'react';
-import { isEmpty } from 'ramda';
+import React, { type Node } from 'react';
 
-import { withTranslation } from 'common/i18n';
-import SearchField from 'common/components/inputs/SearchField';
 import Header from './Header';
-import BreadCrumbs from './BreadCrumbs';
-import {
-  HeaderCont,
-  BelowHeaderContent,
-  SearchCont,
-  MainCont,
-  ContentCont,
-  ChildrenCont,
-} from './styled';
-
-type BreadCrumbsProps = ElementConfig<typeof BreadCrumbs>;
+import { HeaderCont, MainCont, ContentCont, ChildrenCont } from './styled';
 
 type Props = {
-  ...$Exact<BreadCrumbsProps>,
   children: Node,
-  t: Function,
 };
 
-const Layout = ({ crumbs, children, t }: Props) => (
+const Layout = ({ children }: Props) => (
   <>
     <HeaderCont>
       <Header />
     </HeaderCont>
     <MainCont>
       <ContentCont>
-        <BelowHeaderContent>
-          {!isEmpty(crumbs) && <BreadCrumbs crumbs={crumbs} />}
-          <span />
-          <SearchCont>
-            <SearchField onSearch={() => {}} placeholder={t('search')} />
-          </SearchCont>
-        </BelowHeaderContent>
         <ChildrenCont>{children}</ChildrenCont>
       </ContentCont>
     </MainCont>
   </>
 );
 
-Layout.defaultProps = {
-  crumbs: [],
-};
-
-export default withTranslation('common')(Layout);
+export default Layout;

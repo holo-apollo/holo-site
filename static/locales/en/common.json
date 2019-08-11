@@ -1,6 +1,10 @@
 {
   "siteDescription": "Holo Apollo description",
-  "search": "Search...",
-  "allGoods": "All goods",
-  "application": "Application"
+  "workroom": "Workroom of printing and design",
+  "printing": "Printing",
+  "design": "Design",
+  "materials": "Materials",
+  "prices": "Prices",
+  "contacts": "Contacts",
+  "order": "Order"
 }

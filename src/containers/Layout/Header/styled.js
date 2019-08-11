@@ -2,12 +2,14 @@
 import styled, { css } from 'styled-components';
 
 import palette from 'common/palette';
+import { Montserrat } from 'common/fonts';
 
 export const Cont = styled.div`
+  font-family: ${Montserrat};
   padding: 0 20px;
   display: flex;
   justify-content: center;
-  height: 78px;
+  height: 70px;
   border-bottom: solid 1px ${palette.grey};
 `;
 
@@ -20,6 +22,7 @@ export const ContentCont = styled.div`
 
 export const LeftCont = styled.div`
   margin-right: 20px;
+  display: flex;
 `;
 
 export const MiddleCont = styled.div`
@@ -29,12 +32,28 @@ export const MiddleCont = styled.div`
 export const RightCont = styled.div`
   margin-left: 20px;
   display: flex;
-  align-items: center;
 `;
 
 export const Logo = styled.img`
-  width: 78px;
+  width: 70px;
   margin-top: 4px;
+`;
+
+export const LeftTextCont = styled.div`
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const HoloNameCont = styled.div`
+  font-weight: 600;
+  font-size: 12px;
+`;
+
+export const HoloDescriptionCont = styled.div`
+  margin-top: 3px;
+  font-size: 12px;
 `;
 
 export const MenuCont = styled.div`
@@ -48,7 +67,6 @@ const getMenuItemStyles = ({ isActive }: { isActive: boolean }) => css`
 export const MenuItem = styled.span`
   height: 100%;
   font-size: 12px;
-  color: ${palette.grey};
   display: flex;
   align-items: center;
   padding: 0 12px;
@@ -60,4 +78,15 @@ export const MenuItem = styled.span`
     color: ${palette.darkestGrey};
     border-top: solid 5px ${palette.blue};
   }
+`;
+
+export const OrderButtonCont = styled.div`
+  margin-right: 70px;
+  display: flex;
+  align-items: center;
+`;
+
+export const LanguageSelectCont = styled.div`
+  display: flex;
+  align-items: center;
 `;

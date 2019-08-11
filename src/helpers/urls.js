@@ -1,8 +1,12 @@
 // @flow
 export const getHomePageLink = () => '/';
 
-export const getGoodsLink = () => '/goods';
+export const getPrintingLink = () => '/printing';
 
-export const getGoodPageLink = (goodId: number) => `/goods/${goodId}`;
+export const getDesignLink = () => '/design';
 
-export const getApplicationLink = () => '/application';
+export const getMaterialsLink = () => '/materials';
+
+export const getPricesLink = () => '/prices';
+
+export const getContactsLink = () => '/contacts';

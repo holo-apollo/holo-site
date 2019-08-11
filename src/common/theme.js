@@ -1,6 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-import palette from 'common/palette';
+import palette from './palette';
+import { Montserrat } from './fonts';
 
 const theme = createMuiTheme({
   palette: {
@@ -14,7 +15,7 @@ const theme = createMuiTheme({
   },
   typography: {
     useNextVariants: true,
-    fontFamily: 'Montserrat, Arial, sans-serif',
+    fontFamily: Montserrat,
   },
 });
 

@@ -28,5 +28,4 @@ This is the project for UI code of https://www.holo-apollo.art.
 #### Dev stuff
 
 - Use react-testing-library
-- Use eslint-plugin-react-hooks
 - Make storybook work with translations

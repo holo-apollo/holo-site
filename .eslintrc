@@ -27,12 +27,15 @@
             "capIsNewExceptions": ["List", "Map", "Record", "Set", "OrderedSet"]
         }],
         "no-unused-vars": 1,
-        "no-console": 1
+        "no-console": 1,
+        "react-hooks/rules-of-hooks": 2,
+        "react-hooks/exhaustive-deps": 1
     },
     "plugins": [
         "babel",
         "react",
         "flowtype",
-        "prettier"
+        "prettier",
+        "react-hooks"
     ]
 }

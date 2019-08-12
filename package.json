@@ -33,6 +33,7 @@
     "@sentry/browser": "^4.6.3",
     "@sentry/node": "^4.6.3",
     "apisauce": "^1.0.3",
+    "core-js": "^2.6.9",
     "dotenv": "^6.2.0",
     "emoji-mart": "^2.9.2",
     "express": "^4.17.1",
@@ -58,10 +59,10 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-flow": "^7.0.0",
-    "@storybook/addon-actions": "^4.1.12",
-    "@storybook/addon-knobs": "^4.1.12",
-    "@storybook/addons": "^4.1.12",
-    "@storybook/react": "^4.1.12",
+    "@storybook/addon-actions": "^5.1.10",
+    "@storybook/addon-knobs": "^5.1.10",
+    "@storybook/addons": "^5.1.10",
+    "@storybook/react": "^5.1.10",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
@@ -77,6 +78,7 @@
     "jest": "^24.1.0",
     "jest-tap-reporter": "^1.9.0",
     "prettier": "^1.18.2",
-    "react-test-renderer": "^16.9.0"
+    "react-test-renderer": "^16.9.0",
+    "storybook-addon-i18next": "^1.2.0"
   }
 }

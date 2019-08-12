@@ -1,7 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 import palette from './palette';
-import { Montserrat } from './fonts';
+import { AnonymousPro } from './fonts';
 
 const theme = createMuiTheme({
   palette: {
@@ -15,7 +15,7 @@ const theme = createMuiTheme({
   },
   typography: {
     useNextVariants: true,
-    fontFamily: Montserrat,
+    fontFamily: AnonymousPro,
   },
 });
 

@@ -24,7 +24,7 @@ function loadStories() {
 const themeDecorator = story => (
   <div style={{ padding: '20px', minHeight: '100vh' }}>
     <link
-      href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Montserrat:400,600,700&display=swap&subset=cyrillic"
+      href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700&display=swap&subset=cyrillic"
       rel="stylesheet"
     />
     <MuiThemeProvider theme={theme}>

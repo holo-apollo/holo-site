@@ -2,10 +2,8 @@
 import styled, { css } from 'styled-components';
 
 import palette from 'common/palette';
-import { Montserrat } from 'common/fonts';
 
 export const Cont = styled.div`
-  font-family: ${Montserrat};
   padding: 0 20px;
   display: flex;
   justify-content: center;
@@ -47,8 +45,8 @@ export const LeftTextCont = styled.div`
 `;
 
 export const HoloNameCont = styled.div`
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: bold;
+  font-size: 18px;
 `;
 
 export const HoloDescriptionCont = styled.div`
@@ -66,10 +64,11 @@ const getMenuItemStyles = ({ isActive }: { isActive: boolean }) => css`
 
 export const MenuItem = styled.span`
   height: 100%;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bold;
   display: flex;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 30px;
   border-top: solid 5px transparent;
   border-bottom: solid 5px transparent;
   ${getMenuItemStyles};

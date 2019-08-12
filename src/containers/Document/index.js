@@ -114,7 +114,7 @@ class Document extends NextDocument {
             href={`${staticRoot}/img/favicon.png`}
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Montserrat:400,600,700&display=swap&subset=cyrillic"
+            href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700&display=swap&subset=cyrillic"
             rel="stylesheet"
           />
         </Head>

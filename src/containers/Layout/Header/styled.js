@@ -19,16 +19,17 @@ export const ContentCont = styled.div`
 `;
 
 export const LeftCont = styled.div`
-  margin-right: 20px;
+  margin-right: 70px;
   display: flex;
 `;
 
 export const MiddleCont = styled.div`
   display: flex;
+  flex-grow: 1;
 `;
 
 export const RightCont = styled.div`
-  margin-left: 20px;
+  margin-left: 70px;
   display: flex;
 `;
 
@@ -56,6 +57,12 @@ export const HoloDescriptionCont = styled.div`
 
 export const MenuCont = styled.div`
   display: flex;
+  flex-grow: 1;
+
+  & > * {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
 `;
 
 const getMenuItemStyles = ({ isActive }: { isActive: boolean }) => css`
@@ -68,7 +75,8 @@ export const MenuItem = styled.span`
   font-weight: bold;
   display: flex;
   align-items: center;
-  padding: 0 30px;
+  justify-content: center;
+  padding: 0;
   border-top: solid 5px transparent;
   border-bottom: solid 5px transparent;
   ${getMenuItemStyles};

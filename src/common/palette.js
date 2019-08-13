@@ -16,4 +16,7 @@ export default {
 
   // new colors
   black: '#161616',
+  trueBlack: '#000000',
+  yellow: '#f0db74',
+  pink: '#cba2a2',
 };

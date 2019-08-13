@@ -20,7 +20,7 @@ describe('Email validator', function() {
 
 describe('Phone validator', function() {
   it('should validate correct phone', function() {
-    expect(validatePhone('+38(099) 123-45-67')).toBe(true);
+    expect(validatePhone('+380991234567')).toBe(true);
   });
 
   it('should not validate non-digit phone', function() {

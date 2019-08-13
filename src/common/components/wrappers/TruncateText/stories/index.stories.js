@@ -5,7 +5,7 @@ import { text, number } from '@storybook/addon-knobs';
 
 import TruncateText from '../index';
 
-storiesOf('wrappers', module).add('TruncateText', () => (
+storiesOf('Wrappers', module).add('TruncateText', () => (
   <div style={{ width: '530px' }}>
     <TruncateText
       children={text(

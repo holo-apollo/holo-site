@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
@@ -6,7 +6,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import GlobalStyle from 'common/GlobalStyle';
 import theme from 'common/theme';
-import DoubleBounceSpinner from 'common/components/spinners/DoubleBounceSpinner';
 
 // automatically import all components stories
 const componentsReq = require.context(
@@ -20,7 +19,7 @@ function loadStories() {
 }
 
 const themeDecorator = story => (
-  <div style={{ padding: '20px', minHeight: '100vh' }}>
+  <div style={{ padding: '20px' }}>
     <link
       href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700&display=swap&subset=cyrillic"
       rel="stylesheet"
@@ -35,9 +34,5 @@ const themeDecorator = story => (
 
 addDecorator(themeDecorator);
 addDecorator(withKnobs);
-
-addDecorator((story, context) => (
-  <Suspense fallback={<DoubleBounceSpinner />}>{story(context)}</Suspense>
-));
 
 configure(loadStories, module);

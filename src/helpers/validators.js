@@ -5,7 +5,7 @@ export function validateEmail(value) {
 
 export function validatePhone(value) {
   const re = /^[-0-9+()\s]*$/;
-  return re.test(String(value)) && validateLength(value, 25, 5);
+  return re.test(String(value)) && validateLength(value, 13, 5);
 }
 
 export function validateLength(value, maxLength, minLength = 0) {

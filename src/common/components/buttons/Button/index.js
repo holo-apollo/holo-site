@@ -3,7 +3,14 @@ import styled, { css } from 'styled-components';
 
 import palette from 'common/palette';
 
-const getButtonProps = ({ width, height, color, fontSize, fontWeight }) => css`
+const getButtonProps = ({
+  width,
+  height,
+  color,
+  fontSize,
+  fontWeight,
+  disabled,
+}) => css`
   width: ${width}px;
   min-width: ${width}px;
   height: ${height}px;
@@ -11,6 +18,7 @@ const getButtonProps = ({ width, height, color, fontSize, fontWeight }) => css`
   background-color: ${color};
   font-size: ${fontSize}px;
   font-weight: ${fontWeight};
+  cursor: ${disabled ? 'wait' : 'pointer'};
 `;
 
 const getHoverProps = ({ hoverColor }) => css`
@@ -54,7 +62,6 @@ const getHoverProps = ({ hoverColor }) => css`
 const StyledButton = styled.button`
   text-align: center;
   color: ${palette.white};
-  cursor: pointer;
   padding: 0;
   margin: 0;
   border: none;

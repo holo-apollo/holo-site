@@ -65,11 +65,11 @@ export const MenuCont = styled.div`
   }
 `;
 
-const getMenuItemStyles = ({ isActive }: { isActive: boolean }) => css`
+const getMenuItemContStyles = ({ isActive }: { isActive: boolean }) => css`
   ${isActive && `border-top: solid 5px ${palette.blue}`};
 `;
 
-export const MenuItem = styled.span`
+export const MenuItemCont = styled.span`
   height: 100%;
   font-size: 14px;
   font-weight: bold;
@@ -79,7 +79,7 @@ export const MenuItem = styled.span`
   padding: 0;
   border-top: solid 5px transparent;
   border-bottom: solid 5px transparent;
-  ${getMenuItemStyles};
+  ${getMenuItemContStyles};
 
   &:hover {
     color: ${palette.darkestGrey};

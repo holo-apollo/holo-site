@@ -79,7 +79,6 @@
     "jest": "^24.1.0",
     "jest-tap-reporter": "^1.9.0",
     "prettier": "^1.18.2",
-    "react-test-renderer": "^16.9.0",
-    "storybook-addon-i18next": "^1.2.0"
+    "react-test-renderer": "^16.9.0"
   }
 }

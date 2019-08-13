@@ -2,23 +2,23 @@
 
 exports[`IncrementField should match snapshot 1`] = `
 <div
-  className="styled__Cont-sc-1uczn2-0 jiDxzY"
+  className="styled__Cont-sc-16k39zp-0 jrQeOB"
 >
   <div
-    className="styled__Modifier-sc-1uczn2-2 bLawfL"
+    className="styled__Modifier-sc-16k39zp-2 inpbog"
     onClick={[Function]}
   >
     -
   </div>
   <input
-    className="styled__StyledInput-sc-1uczn2-1 hjmKSG"
+    className="styled__StyledInput-sc-16k39zp-1 iyOkIn"
     disabled={true}
     size={1}
     type="text"
     value="0"
   />
   <div
-    className="styled__Modifier-sc-1uczn2-2 bLawfL"
+    className="styled__Modifier-sc-16k39zp-2 inpbog"
     onClick={[Function]}
   >
     +

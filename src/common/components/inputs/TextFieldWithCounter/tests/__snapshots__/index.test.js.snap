@@ -43,10 +43,10 @@ exports[`TextFieldWithCounter should match snapshot 1`] = `
     }
   >
     <span
-      className="styled__HelperCont-pe4d84-0 bjpMQO"
+      className="styled__HelperCont-j0wbud-0 klvfWZ"
     >
       <span
-        className="styled__CounterCont-pe4d84-1 cmBwEd"
+        className="styled__CounterCont-j0wbud-1 eNReRs"
       >
         0
         /

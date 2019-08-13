@@ -3,25 +3,25 @@
 exports[`ImageUploadPreview should match snapshot 1`] = `
 Array [
   <div
-    className="styled__LabelTextCont-sc-3qf63z-0 flMOyl"
+    className="styled__LabelTextCont-r7b88h-0 jzUOUM"
   >
     Label
   </div>,
   <label
-    className="styled__StyledLabel-sc-3qf63z-1 bhlSvV"
+    className="styled__StyledLabel-r7b88h-1 MWVCg"
   >
     <input
-      className="styled__StyledInput-sc-3qf63z-2 bBdwie"
+      className="styled__StyledInput-r7b88h-2 dhlXEV"
       multiple={true}
       name="name"
       onChange={[Function]}
       type="file"
     />
     <div
-      className="styled__ButtonTextCont-sc-3qf63z-3 bxNgpQ"
+      className="styled__ButtonTextCont-r7b88h-3 tUCMr"
     >
       <svg
-        className="SVGIcon__StyledSVG-sc-15q48pi-0 iedNHS"
+        className="SVGIcon__StyledSVG-sc-4a7u5y-0 joEeZN"
         fill="#4caad0"
         height={18}
         viewBox="0 0 18 18"
@@ -41,12 +41,12 @@ Array [
     </div>
   </label>,
   <div
-    className="styled__HelpTextCont-sc-3qf63z-4 iFNHeD"
+    className="styled__HelpTextCont-r7b88h-4 fVRlDC"
   >
     Helper text
   </div>,
   <div
-    className="styled__ImagesCont-sc-3qf63z-5 bOSahM"
+    className="styled__ImagesCont-r7b88h-5 hAtalP"
   />,
 ]
 `;

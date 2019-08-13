@@ -13,6 +13,7 @@ import {
   getContactsLink,
 } from 'helpers/urls';
 import LanguageSelect from 'common/components/inputs/LanguageSelect';
+import MenuItem from './MenuItem';
 import {
   Cont,
   ContentCont,
@@ -24,7 +25,6 @@ import {
   HoloNameCont,
   HoloDescriptionCont,
   MenuCont,
-  MenuItem,
   OrderButtonCont,
   LanguageSelectCont,
 } from './styled';
@@ -59,31 +59,11 @@ const Header = ({ t }: Props) => (
       </Link>
       <MiddleCont>
         <MenuCont>
-          <Link href={getPrintingLink()}>
-            <a>
-              <MenuItem isActive={false}>{t('printing')}</MenuItem>
-            </a>
-          </Link>
-          <Link href={getDesignLink()}>
-            <a>
-              <MenuItem isActive={false}>{t('design')}</MenuItem>
-            </a>
-          </Link>
-          <Link href={getMaterialsLink()}>
-            <a>
-              <MenuItem isActive={false}>{t('materials')}</MenuItem>
-            </a>
-          </Link>
-          <Link href={getPricesLink()}>
-            <a>
-              <MenuItem isActive={false}>{t('prices')}</MenuItem>
-            </a>
-          </Link>
-          <Link href={getContactsLink()}>
-            <a>
-              <MenuItem isActive={false}>{t('contacts')}</MenuItem>
-            </a>
-          </Link>
+          <MenuItem link={getPrintingLink()}>{t('printing')}</MenuItem>
+          <MenuItem link={getDesignLink()}>{t('design')}</MenuItem>
+          <MenuItem link={getMaterialsLink()}>{t('materials')}</MenuItem>
+          <MenuItem link={getPricesLink()}>{t('prices')}</MenuItem>
+          <MenuItem link={getContactsLink()}>{t('contacts')}</MenuItem>
         </MenuCont>
       </MiddleCont>
       <RightCont>

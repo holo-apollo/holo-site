@@ -3,11 +3,9 @@ import { configure, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { withI18next } from 'storybook-addon-i18next';
 
 import GlobalStyle from 'common/GlobalStyle';
 import theme from 'common/theme';
-import { i18n } from 'common/i18n';
 import DoubleBounceSpinner from 'common/components/spinners/DoubleBounceSpinner';
 
 // automatically import all components stories
@@ -35,17 +33,7 @@ const themeDecorator = story => (
   </div>
 );
 
-const i18nDecorator = withI18next({
-  i18n,
-  languages: {
-    uk: 'Укр',
-    ru: 'Рус',
-    en: 'En',
-  },
-});
-
 addDecorator(themeDecorator);
-addDecorator(i18nDecorator);
 addDecorator(withKnobs);
 
 addDecorator((story, context) => (

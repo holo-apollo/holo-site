@@ -1,0 +1,11 @@
+{
+  "successText": "Your application was sent successfully! We will contact you soon",
+  "nameLabel":  "Name",
+  "emailLabel":  "Email",
+  "phoneLabel":  "Phone",
+  "buttonText": "Get advice",
+  "fieldRequired": "This field is required",
+  "invalidEmail": "Please enter a valid email address",
+  "invalidPhone": "Please enter a valid phone number",
+  "unknownError": "Oops, unknown error. Please try again in a moment"
+}

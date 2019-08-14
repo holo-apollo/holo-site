@@ -27,6 +27,7 @@ type Props = FormikProps<Values> & {
   },
   backdropColor: string,
   isSuccess: boolean,
+  setSuccess: boolean => void,
 };
 
 const PureAdviceForm = ({
@@ -41,6 +42,7 @@ const PureAdviceForm = ({
     buttonText,
   },
   handleSubmit,
+  handleChange,
   isSubmitting,
   errors,
   submitCount,
@@ -58,6 +60,7 @@ const PureAdviceForm = ({
             <TextField
               name="name"
               label={nameLabel}
+              onChange={handleChange}
               errorText={submitCount > 0 ? errors.name : undefined}
             />
           </FieldCont>
@@ -66,6 +69,7 @@ const PureAdviceForm = ({
               name="email"
               type="email"
               label={emailLabel}
+              onChange={handleChange}
               errorText={submitCount > 0 ? errors.email : undefined}
             />
           </FieldCont>
@@ -73,6 +77,7 @@ const PureAdviceForm = ({
             <TextField
               name="phone"
               label={phoneLabel}
+              onChange={handleChange}
               errorText={submitCount > 0 ? errors.phone : undefined}
             />
           </FieldCont>

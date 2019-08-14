@@ -1,3 +1,5 @@
 {
-  "welcome": "Добро пожаловать на Holo Apollo!"
+  "welcome": "Добро пожаловать на Holo Apollo!",
+  "adviceFormHeaderText1":  " Есть вопросы?",
+  "adviceFormHeaderText2":  "Да, хочу"
 }

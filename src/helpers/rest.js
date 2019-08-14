@@ -1,10 +1,11 @@
 // @flow
 import { create } from 'apisauce';
 
+import { i18n } from 'common/i18n';
 import { getEnv } from './misc';
 
 const createApi = (apiRoot: string) => {
-  return create({
+  const api = create({
     baseURL: apiRoot,
     headers: {
       post: {
@@ -15,6 +16,10 @@ const createApi = (apiRoot: string) => {
       },
     },
   });
+  api.addRequestTransform(request => {
+    request.headers['Accept-Language'] = i18n.language;
+  });
+  return api;
 };
 
 export const cmsApi = createApi(getEnv('CMS_API_ROOT') || '/');

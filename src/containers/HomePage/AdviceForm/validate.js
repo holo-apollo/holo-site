@@ -25,6 +25,7 @@ const validate = (values: Values, { messages }: Props) => {
   if (!validatePhone(values.phone)) {
     errors.phone = messages.invalidPhone;
   }
+  return errors;
 };
 
 export default validate;

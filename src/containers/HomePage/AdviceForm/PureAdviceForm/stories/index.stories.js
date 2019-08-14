@@ -22,6 +22,7 @@ storiesOf('Forms', module).add('AdviceForm', () => (
       isSubmitting={boolean('isSubmitting', false)}
       handleSubmit={action('handleSubmit')}
       isSuccess={boolean('isSuccess', false)}
+      setSuccess={action('setSuccess')}
       errors={{
         nonFieldErrors: text('nonFieldErrors', ''),
         name: text('nameError', ''),

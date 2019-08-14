@@ -22,6 +22,9 @@ This is the project for UI code of https://www.holo-apollo.art.
 
 #### Functional stuff
 
+- Language select always shows UK initially
+- Make margin above material-ui smaller
+
 - Use Yup schemas for validation
 - Try using react-helmet-async to fix the deprecation warning
 - Upgrade material-ui to v4 (if used)

@@ -1,8 +1,8 @@
 // @flow
-import React, { useState, type ComponentType } from 'react';
+import React, { useState } from 'react';
 import { withFormik } from 'formik';
 
-import { withTranslation } from 'common/i18n';
+import { useTranslation } from 'common/i18n';
 import validate from './validate';
 import handleSubmit from './handleSubmit';
 import PureAdviceForm from './PureAdviceForm';
@@ -14,17 +14,13 @@ type Props = {
   backdropColor: string,
 };
 
-type NotEnhancedProps = {
-  t: Function,
-  ...$Exact<Props>,
-};
-
 const PureAdviceFormWithFormik = withFormik({ validate, handleSubmit })(
   PureAdviceForm
 );
 
-const NotEnhancedAdviceForm = ({ t, messages, ...rest }: NotEnhancedProps) => {
+const AdviceForm = ({ messages, ...rest }: Props) => {
   const [isSuccess, setSuccess] = useState(false);
+  const { t } = useTranslation('advice_form');
   const staticMessages = {};
   [
     'successText',
@@ -52,9 +48,5 @@ const NotEnhancedAdviceForm = ({ t, messages, ...rest }: NotEnhancedProps) => {
     />
   );
 };
-
-const i18nHoc = withTranslation('advice_form');
-
-const AdviceForm: ComponentType<Props> = i18nHoc(NotEnhancedAdviceForm);
 
 export default AdviceForm;

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-import { i18n } from 'common/i18n';
+import { useTranslation } from 'common/i18n';
 import type { InputEvent } from 'common/types';
 
 type PureProps = {
@@ -25,15 +25,19 @@ export const PureLanguageSelect = ({ onSelect, selectedValue }: PureProps) => (
   </select>
 );
 
-function handleLanguageSelect(event: InputEvent) {
-  i18n.changeLanguage(event.target.value);
-}
+const LanguageSelect = () => {
+  const { i18n } = useTranslation();
 
-const LanguageSelect = () => (
-  <PureLanguageSelect
-    onSelect={handleLanguageSelect}
-    selectedValue={i18n.language}
-  />
-);
+  function handleLanguageSelect(event: InputEvent) {
+    i18n.changeLanguage(event.target.value);
+  }
+
+  return (
+    <PureLanguageSelect
+      onSelect={handleLanguageSelect}
+      selectedValue={i18n.language}
+    />
+  );
+};
 
 export default LanguageSelect;

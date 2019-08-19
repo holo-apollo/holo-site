@@ -3,15 +3,12 @@ import React from 'react';
 
 import palette from 'common/palette';
 import Layout from 'containers/Layout';
-import { withTranslation } from 'common/i18n';
+import { useTranslation } from 'common/i18n';
 import AdviceForm from './AdviceForm';
 import { AdviceFormCont } from './styled';
 
-type Props = {
-  t: Function,
-};
-
-const HomePage = ({ t }: Props) => {
+const HomePage = () => {
+  const { t } = useTranslation('home');
   return (
     <Layout>
       {t('welcome')}
@@ -35,4 +32,4 @@ HomePage.getInitialProps = async () => ({
   namespacesRequired: ['common', 'home', 'advice_form'],
 });
 
-export default withTranslation('home')(HomePage);
+export default HomePage;

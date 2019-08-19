@@ -10,12 +10,12 @@ const NextI18NextInstance = new NextI18Next({
 });
 
 // deconstruct for clarity
-const { appWithTranslation, withTranslation, Link, i18n } = NextI18NextInstance;
+const { appWithTranslation, useTranslation, Link, i18n } = NextI18NextInstance;
 
 module.exports = {
   default: NextI18NextInstance,
   appWithTranslation,
-  withTranslation,
+  useTranslation,
   Link,
   i18n,
 };

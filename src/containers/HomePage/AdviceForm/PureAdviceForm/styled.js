@@ -9,6 +9,11 @@ export const Cont = styled.div`
   border: 1px solid ${palette.trueBlack};
   box-sizing: border-box;
   box-shadow: -9px 10px ${({ backdropColor }) => backdropColor};
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0 0 ${({ backdropColor }) => backdropColor};
+  }
 `;
 
 export const SuccessCont = styled.div`

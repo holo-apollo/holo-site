@@ -2,10 +2,10 @@
 
 exports[`Select should match snapshot 1`] = `
 <div
-  className="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
+  className="MuiFormControl-root MuiFormControl-fullWidth"
 >
   <label
-    className="MuiFormLabel-root-16 MuiInputLabel-root-5 MuiInputLabel-formControl-10 MuiInputLabel-animated-13"
+    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
     data-shrink={false}
     style={
       Object {
@@ -16,55 +16,51 @@ exports[`Select should match snapshot 1`] = `
     Label
   </label>
   <div
-    className="MuiInputBase-root-43 MuiInput-root-30 MuiInput-underline-34 MuiInputBase-formControl-44 MuiInput-formControl-31"
+    className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
     onClick={[Function]}
   >
-    <div
-      className="MuiSelect-root-23"
+    <select
+      aria-invalid={false}
+      className="MuiSelect-root MuiSelect-select MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+      defaultValue=""
+      disabled={false}
+      multiple={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={false}
     >
-      <select
-        aria-invalid={false}
-        className="MuiSelect-select-24 MuiInputBase-input-53 MuiInput-input-38"
-        defaultValue=""
-        disabled={false}
-        multiple={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        required={false}
+      <option
+        disabled={true}
+        value=""
+      />
+      <option
+        value={1}
       >
-        <option
-          disabled={true}
-          value=""
-        />
-        <option
-          value={1}
-        >
-          One
-        </option>
-        <option
-          value={2}
-        >
-          Two
-        </option>
-        <option
-          value={3}
-        >
-          Three
-        </option>
-      </select>
-      <svg
-        aria-hidden="true"
-        className="MuiSvgIcon-root-60 MuiSelect-icon-29"
-        focusable="false"
-        role="presentation"
-        viewBox="0 0 24 24"
+        One
+      </option>
+      <option
+        value={2}
       >
-        <path
-          d="M7 10l5 5 5-5z"
-        />
-      </svg>
-    </div>
+        Two
+      </option>
+      <option
+        value={3}
+      >
+        Three
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      className="MuiSvgIcon-root MuiSelect-icon"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M7 10l5 5 5-5z"
+      />
+    </svg>
   </div>
 </div>
 `;

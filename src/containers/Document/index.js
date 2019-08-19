@@ -1,7 +1,8 @@
 // @flow
 import React from 'react';
 import NextDocument, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet as StyledCompSheet } from 'styled-components';
+import { ServerStyleSheets as MaterialSheets } from '@material-ui/styles';
 import Helmet from 'react-helmet';
 
 const staticRoot = process.env.STATIC_ROOT || '';
@@ -9,7 +10,8 @@ const staticRoot = process.env.STATIC_ROOT || '';
 class Document extends NextDocument {
   // $FlowFixMe
   static async getInitialProps(ctx) {
-    const sheet = new ServerStyleSheet();
+    const styledCompSheet = new StyledCompSheet();
+    const materialSheets = new MaterialSheets();
     const originalRenderPage = ctx.renderPage;
 
     try {
@@ -26,14 +28,11 @@ class Document extends NextDocument {
 
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+          enhanceApp: App => props =>
+            materialSheets.collect(
+              styledCompSheet.collectStyles(<App {...props} />)
+            ),
         });
-
-      let css;
-      // It might be undefined, e.g. after an error.
-      if (pageContext) {
-        css = pageContext.sheetsRegistry.toString();
-      }
 
       // see https://github.com/nfl/react-helmet#server-usage for more information
       // 'head' was occupied by 'renderPage().head', we cannot use it
@@ -51,19 +50,15 @@ class Document extends NextDocument {
         helmet,
         // Styles fragment is rendered after the app and page rendering finish.
         styles: (
-          <React.Fragment>
-            <style
-              id="jss-server-side"
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{ __html: css }}
-            />
+          <>
             {initialProps.styles}
-            {sheet.getStyleElement()}
-          </React.Fragment>
+            {materialSheets.getStyleElement()}
+            {styledCompSheet.getStyleElement()}
+          </>
         ),
       };
     } finally {
-      sheet.seal();
+      styledCompSheet.seal();
     }
   }
 

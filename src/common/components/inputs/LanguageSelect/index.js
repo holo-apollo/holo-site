@@ -1,5 +1,7 @@
 // @flow
 import React from 'react';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 
 import { useTranslation } from 'common/i18n';
 import type { InputEvent } from 'common/types';
@@ -16,13 +18,13 @@ const languageOptions = [
 ];
 
 export const PureLanguageSelect = ({ onSelect, selectedValue }: PureProps) => (
-  <select name="language" onChange={onSelect} value={selectedValue}>
+  <Select name="language" onChange={onSelect} value={selectedValue}>
     {languageOptions.map(o => (
-      <option key={o.value} value={o.value}>
+      <MenuItem key={o.value} value={o.value}>
         {o.label}
-      </option>
+      </MenuItem>
     ))}
-  </select>
+  </Select>
 );
 
 const LanguageSelect = () => {

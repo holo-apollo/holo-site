@@ -1,16 +1,26 @@
 // @flow
 import React from 'react';
 
-import { getEnv } from 'helpers/misc';
+import { getTranslatedObject } from 'helpers/misc';
+import { useTranslation } from 'common/i18n';
+import data from './data';
 import Banner from './Banner';
 
-const staticRoot = getEnv('STATIC_ROOT');
-
-const bg = `${staticRoot}/img/bg.svg`;
-const banner = `${staticRoot}/img/banner.png`;
-
 const Banners = () => {
-  return <Banner bgUrl={bg} bannerUrl={banner} />;
+  const { i18n } = useTranslation();
+  return (
+    <>
+      {data.map(banner => (
+        <Banner
+          key={banner.id}
+          {...getTranslatedObject(banner, i18n.language, [
+            'mainText',
+            'subText',
+          ])}
+        />
+      ))}
+    </>
+  );
 };
 
 export default Banners;

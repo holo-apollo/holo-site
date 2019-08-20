@@ -5,7 +5,7 @@ export default {
   evening: '#606583',
   lightEvening: '#868ba9',
   lightestEvening: '#bbc4cf',
-  blue: '#4caad0',
+  blue: '#1ad4e0',
   deepBlue: '#346d84',
   darkestGrey: '#212121',
   darkGrey: '#424242',

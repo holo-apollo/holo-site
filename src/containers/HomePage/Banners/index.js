@@ -1,10 +1,16 @@
 // @flow
 import React from 'react';
 
-import { Cont } from './styled';
+import { getEnv } from 'helpers/misc';
+import Banner from './Banner';
+
+const staticRoot = getEnv('STATIC_ROOT');
+
+const bg = `${staticRoot}/img/bg.svg`;
+const banner = `${staticRoot}/img/banner.png`;
 
 const Banners = () => {
-  return <Cont />;
+  return <Banner bgUrl={bg} bannerUrl={banner} />;
 };
 
 export default Banners;

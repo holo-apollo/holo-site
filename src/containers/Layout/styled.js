@@ -1,5 +1,5 @@
 // @flow
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import palette from 'common/palette';
 
@@ -11,18 +11,25 @@ export const HeaderCont = styled.div`
   background-color: ${palette.white};
 `;
 
-export const MainCont = styled.div`
-  margin-top: 100px;
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-`;
-
 export const ContentCont = styled.div`
-  flex-grow: 1;
-  max-width: 1300px;
+  margin-top: 70px;
 `;
 
-export const ChildrenCont = styled.div`
-  margin-top: 75px;
+const getSectionStyles = ({ fullWidth }: { fullWidth: boolean }) => {
+  if (fullWidth) {
+    return css``;
+  }
+  return css`
+    max-width: 1300px;
+    padding: 0 20px;
+    margin: 0 auto;
+  `;
+};
+
+export const Section = styled.div`
+  ${getSectionStyles};
 `;
+
+Section.defaultProps = {
+  fullWidth: false,
+};

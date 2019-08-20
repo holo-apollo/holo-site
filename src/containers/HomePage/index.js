@@ -2,28 +2,33 @@
 import React from 'react';
 
 import palette from 'common/palette';
-import Layout from 'containers/Layout';
+import Layout, { Section } from 'containers/Layout';
 import { useTranslation } from 'common/i18n';
 import AdviceForm from './AdviceForm';
+import Banners from './Banners';
 import { AdviceFormCont } from './styled';
 
 const HomePage = () => {
   const { t } = useTranslation('home');
   return (
     <Layout>
-      {t('welcome')}
-      <AdviceFormCont>
-        <AdviceForm
-          messages={{ headerText: t('adviceFormHeaderText1') }}
-          backdropColor={palette.yellow}
-        />
-      </AdviceFormCont>
-      <AdviceFormCont>
-        <AdviceForm
-          messages={{ headerText: t('adviceFormHeaderText2') }}
-          backdropColor={palette.pink}
-        />
-      </AdviceFormCont>
+      <Section fullWidth={true}>
+        <Banners />
+      </Section>
+      <Section>
+        <AdviceFormCont>
+          <AdviceForm
+            messages={{ headerText: t('adviceFormHeaderText1') }}
+            backdropColor={palette.yellow}
+          />
+        </AdviceFormCont>
+        <AdviceFormCont>
+          <AdviceForm
+            messages={{ headerText: t('adviceFormHeaderText2') }}
+            backdropColor={palette.pink}
+          />
+        </AdviceFormCont>
+      </Section>
     </Layout>
   );
 };

@@ -8,7 +8,7 @@ Array [
     Label
   </div>,
   <label
-    className="styled__StyledLabel-r7b88h-1 MWVCg"
+    className="styled__StyledLabel-r7b88h-1 jtwPWi"
   >
     <input
       className="styled__StyledInput-r7b88h-2 dhlXEV"
@@ -22,14 +22,14 @@ Array [
     >
       <svg
         className="SVGIcon__StyledSVG-sc-4a7u5y-0 joEeZN"
-        fill="#4caad0"
+        fill="#1ad4e0"
         height={18}
         viewBox="0 0 18 18"
         width={18}
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
-          fill="#4caad0"
+          fill="#1ad4e0"
           transform="translate(-750.000000, -918.000000)"
         >
           <path

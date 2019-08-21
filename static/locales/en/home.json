@@ -1,4 +1,20 @@
 {
   "adviceFormHeaderText1":  "Got questions?",
-  "adviceFormHeaderText2":  "Yes, I do"
+  "adviceFormHeaderText2":  "Yes, I do",
+  "workroom": "Workroom of printing and design",
+  "needBusinessCards": "You need business cards but have no designer?<br/>Got design but unhappy with ordinary printing houses?<br/><br/>holo apollo art workroom is a unique place where both design and printing are of exceptional quality.",
+  "printing": "Printing",
+  "design": "Design",
+  "businessCards": "Business cards",
+  "invitations": "Invitations",
+  "weddingPrinting": "Wedding printing",
+  "labels": "Labels",
+  "posters": "Posters",
+  "menus": "Restaurant menus",
+  "logo": "Logo",
+  "corporateIdentity": "Corporate identity",
+  "infographics": "Infographics",
+  "instagramDesign": "Instagram design",
+  "printingDesign": "Design for printing",
+  "techLayouts": "Technical layouts"
 }

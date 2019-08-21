@@ -1,4 +1,20 @@
 {
   "adviceFormHeaderText1":  " Есть вопросы?",
-  "adviceFormHeaderText2":  "Да, хочу"
+  "adviceFormHeaderText2":  "Да, хочу",
+  "workroom": "Мастерская печати и дизайна",
+  "needBusinessCards": "Нужны визитки, но нет дизайнера?<br/>Есть дизайн, но не доволен работой обычных типографий?<br/><br/>Мастерская holo apollo art - уникальное место, где и дизайн, и печать максимально качественные.",
+  "printing": "Печать",
+  "design": "Дизайн",
+  "businessCards": "Визитки",
+  "invitations": "Приглашения",
+  "weddingPrinting": "Свадебная полиграфия",
+  "labels": "Этикетки",
+  "posters": "Плакаты и афиши",
+  "menus": "Меню для ресторанов",
+  "logo": "Логотип",
+  "corporateIdentity": "Фирменный стиль",
+  "infographics": "Инфографика",
+  "instagramDesign": "Instagram дизайн",
+  "printingDesign": "Дизайн для печати",
+  "techLayouts": "Технические макеты"
 }

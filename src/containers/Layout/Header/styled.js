@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 import palette from 'common/palette';
 
 export const Cont = styled.div`
-  padding: 0 20px;
   display: flex;
   justify-content: center;
   height: 70px;
@@ -13,6 +12,7 @@ export const Cont = styled.div`
 
 export const ContentCont = styled.div`
   max-width: 1300px;
+  padding: 0 20px;
   flex-grow: 1;
   display: flex;
   justify-content: space-between;

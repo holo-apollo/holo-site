@@ -19,4 +19,5 @@ export default {
   trueBlack: '#000000',
   yellow: '#f0db74',
   pink: '#cba2a2',
+  darkPink: '#cba1a1',
 };

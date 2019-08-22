@@ -4,8 +4,6 @@ import styled, { css } from 'styled-components';
 import palette from 'common/palette';
 
 export const Cont = styled.div`
-  display: flex;
-  justify-content: center;
   height: 70px;
   border-bottom: solid 1px ${palette.grey};
 `;
@@ -13,7 +11,7 @@ export const Cont = styled.div`
 export const ContentCont = styled.div`
   max-width: 1300px;
   padding: 0 20px;
-  flex-grow: 1;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 `;
@@ -82,7 +80,7 @@ export const MenuItemCont = styled.span`
   ${getMenuItemContStyles};
 
   &:hover {
-    color: ${palette.darkestGrey};
+    color: ${palette.blue};
     border-top: solid 5px ${palette.blue};
   }
 `;

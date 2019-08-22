@@ -2,6 +2,7 @@
 import React, { type Node } from 'react';
 
 import Header from './Header';
+import Footer from './Footer';
 import { HeaderCont, ContentCont } from './styled';
 
 export { Section } from './styled';
@@ -16,6 +17,7 @@ const Layout = ({ children }: Props) => (
       <Header />
     </HeaderCont>
     <ContentCont>{children}</ContentCont>
+    <Footer />
   </>
 );
 

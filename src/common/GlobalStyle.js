@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+
+  .slick-dots {
+    bottom: 10px;
+  }
 `;
 
 export default GlobalStyle;

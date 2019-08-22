@@ -6,6 +6,7 @@ import Banners from './Banners';
 import BlockOne from './BlockOne';
 import Gallery from './Gallery';
 import BlockTwo from './BlockTwo';
+import BlockThree from './BlockThree';
 
 const HomePage = () => (
   <Layout>
@@ -20,6 +21,9 @@ const HomePage = () => (
     </Section>
     <Section fullWidth={true}>
       <BlockTwo />
+    </Section>
+    <Section>
+      <BlockThree />
     </Section>
   </Layout>
 );

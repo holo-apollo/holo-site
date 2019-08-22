@@ -1,5 +1,6 @@
 // @flow
-import React from 'react';
+import React, { useState } from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 
 import { useTranslation, Link } from 'common/i18n';
 import { getPrintingLink, getDesignLink } from 'helpers/urls';
@@ -10,6 +11,7 @@ import {
   SubTextCont,
   BottomCont,
   BottomLeftCont,
+  VerticalLine,
   BottomLeftColumn,
   BottomLeftColumnHeader,
   BottomLeftColumnItem,
@@ -21,6 +23,37 @@ import AdviceForm from '../AdviceForm';
 
 const BlockOne = () => {
   const { t } = useTranslation('home');
+  const [visible, setVisible] = useState(false);
+
+  function setVisibleOn(isVisible: boolean) {
+    if (isVisible) {
+      setVisible(true);
+    }
+  }
+
+  const columns = [
+    [
+      'printing',
+      'businessCards',
+      'invitations',
+      'weddingPrinting',
+      'labels',
+      'posters',
+      'menus',
+      getPrintingLink(),
+    ],
+    [
+      'design',
+      'logo',
+      'corporateIdentity',
+      'infographics',
+      'instagramDesign',
+      'printingDesign',
+      'techLayouts',
+      getDesignLink(),
+    ],
+  ];
+
   return (
     <>
       <TopCont>
@@ -30,38 +63,38 @@ const BlockOne = () => {
         />
       </TopCont>
       <BottomCont>
-        <BottomLeftCont>
-          <BottomLeftColumn>
-            <BottomLeftColumnHeader>{t('printing')}</BottomLeftColumnHeader>
-            <BottomLeftColumnItem>{t('businessCards')}</BottomLeftColumnItem>
-            <BottomLeftColumnItem>{t('invitations')}</BottomLeftColumnItem>
-            <BottomLeftColumnItem>{t('weddingPrinting')}</BottomLeftColumnItem>
-            <BottomLeftColumnItem>{t('labels')}</BottomLeftColumnItem>
-            <BottomLeftColumnItem>{t('posters')}</BottomLeftColumnItem>
-            <BottomLeftColumnItem>{t('menus')}</BottomLeftColumnItem>
-            <MoreLink>
-              <Link href={getPrintingLink()}>
-                <a>{t('more')}</a>
-              </Link>
-            </MoreLink>
-          </BottomLeftColumn>
-          <BottomLeftColumn>
-            <BottomLeftColumnHeader>{t('design')}</BottomLeftColumnHeader>
-            <BottomLeftColumnItem>{t('logo')}</BottomLeftColumnItem>
-            <BottomLeftColumnItem>
-              {t('corporateIdentity')}
-            </BottomLeftColumnItem>
-            <BottomLeftColumnItem>{t('infographics')}</BottomLeftColumnItem>
-            <BottomLeftColumnItem>{t('instagramDesign')}</BottomLeftColumnItem>
-            <BottomLeftColumnItem>{t('printingDesign')}</BottomLeftColumnItem>
-            <BottomLeftColumnItem>{t('techLayouts')}</BottomLeftColumnItem>
-            <MoreLink>
-              <Link href={getDesignLink()}>
-                <a>{t('more')}</a>
-              </Link>
-            </MoreLink>
-          </BottomLeftColumn>
-        </BottomLeftCont>
+        <VisibilitySensor onChange={setVisibleOn}>
+          <BottomLeftCont>
+            {columns.map((column, colIndex) => (
+              <>
+                <VerticalLine visible={visible} index={colIndex} />
+                <BottomLeftColumn>
+                  <BottomLeftColumnHeader>
+                    {t(column[0])}
+                  </BottomLeftColumnHeader>
+                  {column.slice(1, column.length - 1).map((row, rowIndex) => (
+                    <BottomLeftColumnItem
+                      index={colIndex * (column.length - 1) + rowIndex}
+                      totalItems={column.length - 1}
+                      visible={visible}
+                    >
+                      {t(row)}
+                    </BottomLeftColumnItem>
+                  ))}
+                  <MoreLink
+                    index={(colIndex + 1) * column.length - 1}
+                    totalItems={column.length - 1}
+                    visible={visible}
+                  >
+                    <Link href={column[column.length - 1]}>
+                      <a>{t('more')}</a>
+                    </Link>
+                  </MoreLink>
+                </BottomLeftColumn>
+              </>
+            ))}
+          </BottomLeftCont>
+        </VisibilitySensor>
         <BottomRightCont>
           <AdviceFormCont>
             <AdviceForm

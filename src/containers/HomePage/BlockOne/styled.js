@@ -1,5 +1,5 @@
 // @flow
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import palette from 'common/palette';
 
@@ -31,10 +31,26 @@ export const BottomLeftCont = styled.div`
   margin-top: 16px;
 `;
 
+const getVerticalLineStyles = ({
+  visible,
+  index,
+}: {
+  visible: boolean,
+  index: number,
+}) => css`
+  height: ${visible ? '100%' : '0.1%'};
+  transition: height 0.5s ease-in ${index * 0.5}s;
+`;
+
+export const VerticalLine = styled.div`
+  width: 1px;
+  background-color: ${palette.trueBlack};
+  ${getVerticalLineStyles};
+`;
+
 export const BottomLeftColumn = styled.div`
   width: 328px;
   padding-left: 54px;
-  border-left: 1px solid ${palette.trueBlack};
 `;
 
 export const BottomLeftColumnHeader = styled.div`
@@ -44,10 +60,46 @@ export const BottomLeftColumnHeader = styled.div`
   line-height: 42px;
 `;
 
+const getBottomLeftColumnItemStyles = ({
+  index,
+  totalItems,
+  visible,
+}: {
+  index: number,
+  totalItems: number,
+  visible: boolean,
+}) => {
+  const step = 0.5 / totalItems;
+  return css`
+    visibility: ${visible ? 'visible' : 'hidden'};
+    transition: visibility ${step}s ease-in ${0.5 + index * step}s;
+  `;
+};
+
 export const BottomLeftColumnItem = styled.div`
   font-size: 14px;
   line-height: 24px;
+  ${getBottomLeftColumnItemStyles};
 `;
+
+const getMoreLinkStyles = ({
+  index,
+  totalItems,
+  visible,
+}: {
+  index: number,
+  totalItems: number,
+  visible: boolean,
+}) => {
+  const step = 0.5 / totalItems;
+  return css`
+    visibility: ${visible ? 'visible' : 'hidden'};
+    position: relative;
+    left: ${visible ? '0' : '-50px'};
+    transition: visibility ${step}s ease-in ${0.5 + index * step}s,
+      left ${step}s ease-in ${0.5 + (index + 1) * step}s;
+  `;
+};
 
 export const MoreLink = styled.div`
   font-weight: bold;
@@ -59,6 +111,8 @@ export const MoreLink = styled.div`
   &:hover {
     text-decoration: underline;
   }
+
+  ${getMoreLinkStyles};
 `;
 
 export const BottomRightCont = styled.div``;

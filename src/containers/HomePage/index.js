@@ -2,9 +2,10 @@
 import React from 'react';
 
 import Layout, { Section } from 'containers/Layout';
-import BlockOne from './BlockOne';
 import Banners from './Banners';
+import BlockOne from './BlockOne';
 import Gallery from './Gallery';
+import BlockTwo from './BlockTwo';
 
 const HomePage = () => (
   <Layout>
@@ -16,6 +17,9 @@ const HomePage = () => (
     </Section>
     <Section fullWidth={true}>
       <Gallery />
+    </Section>
+    <Section fullWidth={true}>
+      <BlockTwo />
     </Section>
   </Layout>
 );

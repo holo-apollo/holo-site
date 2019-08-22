@@ -14,7 +14,6 @@ import {
   Cont,
   ContentCont,
   LeftCont,
-  MiddleCont,
   RightCont,
   HoloNameCont,
   HoloDescriptionCont,
@@ -57,15 +56,13 @@ const Footer = () => {
           </ContactsCont>
           <CopyrightCont>© 2019 Holo Apollo Art {t('copyright')}</CopyrightCont>
         </LeftCont>
-        <MiddleCont>
-          <MenuCont>
-            <MenuItem link={getPrintingLink()}>{t('printing')}</MenuItem>
-            <MenuItem link={getDesignLink()}>{t('design')}</MenuItem>
-            <MenuItem link={getMaterialsLink()}>{t('materials')}</MenuItem>
-            <MenuItem link={getPricesLink()}>{t('prices')}</MenuItem>
-            <MenuItem link={getContactsLink()}>{t('contacts')}</MenuItem>
-          </MenuCont>
-        </MiddleCont>
+        <MenuCont>
+          <MenuItem link={getPrintingLink()}>{t('printing')}</MenuItem>
+          <MenuItem link={getDesignLink()}>{t('design')}</MenuItem>
+          <MenuItem link={getMaterialsLink()}>{t('materials')}</MenuItem>
+          <MenuItem link={getPricesLink()}>{t('prices')}</MenuItem>
+          <MenuItem link={getContactsLink()}>{t('contacts')}</MenuItem>
+        </MenuCont>
         <RightCont>
           <Logo src={`${staticRoot}/img/holo-apollo-logo.png`} alt="logo" />
         </RightCont>

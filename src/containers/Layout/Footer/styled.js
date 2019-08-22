@@ -13,16 +13,11 @@ export const ContentCont = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 `;
 
 export const LeftCont = styled.div`
   margin: 44px 70px 29px 0;
-`;
-
-export const MiddleCont = styled.div`
-  display: flex;
-  flex-grow: 1;
-  margin-top: 44px;
 `;
 
 export const RightCont = styled.div`
@@ -67,6 +62,7 @@ export const CopyrightCont = styled.div`
 export const MenuCont = styled.div`
   display: flex;
   flex-grow: 1;
+  margin-top: 44px;
 
   & > * {
     flex-grow: 1;
@@ -75,7 +71,6 @@ export const MenuCont = styled.div`
 `;
 
 export const MenuItemCont = styled.span`
-  height: 100%;
   font-size: 14px;
   font-weight: bold;
   display: flex;

@@ -1,7 +1,8 @@
 // @flow
 import React from 'react';
 
-import { useTranslation } from 'common/i18n';
+import { useTranslation, Link } from 'common/i18n';
+import { getPrintingLink, getDesignLink } from 'helpers/urls';
 import palette from 'common/palette';
 import {
   TopCont,
@@ -12,6 +13,7 @@ import {
   BottomLeftColumn,
   BottomLeftColumnHeader,
   BottomLeftColumnItem,
+  MoreLink,
   BottomRightCont,
   AdviceFormCont,
 } from './styled';
@@ -37,6 +39,11 @@ const BlockOne = () => {
             <BottomLeftColumnItem>{t('labels')}</BottomLeftColumnItem>
             <BottomLeftColumnItem>{t('posters')}</BottomLeftColumnItem>
             <BottomLeftColumnItem>{t('menus')}</BottomLeftColumnItem>
+            <MoreLink>
+              <Link href={getPrintingLink()}>
+                <a>{t('more')}</a>
+              </Link>
+            </MoreLink>
           </BottomLeftColumn>
           <BottomLeftColumn>
             <BottomLeftColumnHeader>{t('design')}</BottomLeftColumnHeader>
@@ -48,6 +55,11 @@ const BlockOne = () => {
             <BottomLeftColumnItem>{t('instagramDesign')}</BottomLeftColumnItem>
             <BottomLeftColumnItem>{t('printingDesign')}</BottomLeftColumnItem>
             <BottomLeftColumnItem>{t('techLayouts')}</BottomLeftColumnItem>
+            <MoreLink>
+              <Link href={getDesignLink()}>
+                <a>{t('more')}</a>
+              </Link>
+            </MoreLink>
           </BottomLeftColumn>
         </BottomLeftCont>
         <BottomRightCont>

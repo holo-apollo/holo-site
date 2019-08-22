@@ -49,6 +49,18 @@ export const BottomLeftColumnItem = styled.div`
   line-height: 24px;
 `;
 
+export const MoreLink = styled.div`
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  margin-top: 30px;
+  color: ${palette.blue};
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export const BottomRightCont = styled.div``;
 
 export const AdviceFormCont = styled.div`

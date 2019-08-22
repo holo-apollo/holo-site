@@ -10,7 +10,14 @@ import Banner from './Banner';
 const Banners = () => {
   const { i18n } = useTranslation();
   return (
-    <Slider arrows={false} dots={true} draggable={false} autoplay={true}>
+    <Slider
+      arrows={false}
+      dots={true}
+      draggable={false}
+      autoplay={true}
+      speed={1000}
+      cssEase="cubic-bezier(0.165, 0.84, 0.44, 1)"
+    >
       {data.map(banner => (
         <Banner
           key={banner.id}

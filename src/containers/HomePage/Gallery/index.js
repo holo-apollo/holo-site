@@ -1,7 +1,6 @@
 // @flow
 import React from 'react';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
 
 import data from './data';
 import { GalleryItem } from './styled';

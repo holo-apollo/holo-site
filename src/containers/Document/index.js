@@ -112,6 +112,17 @@ class Document extends NextDocument {
             href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700&display=swap&subset=cyrillic"
             rel="stylesheet"
           />
+          {/* CSS for react-slick. They a very light so probably no need to worry about including them globally. */}
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          />
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />

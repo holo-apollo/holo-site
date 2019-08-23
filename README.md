@@ -22,6 +22,7 @@ This is the project for UI code of https://www.holo-apollo.art.
 
 #### Functional stuff
 
+- Use h1, h2 for bold text
 - Make margin above material-ui smaller
 
 - Try using react-helmet-async to fix the deprecation warning

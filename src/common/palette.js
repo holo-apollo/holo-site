@@ -20,4 +20,5 @@ export default {
   yellow: '#f0db74',
   pink: '#cba2a2',
   darkPink: '#cba1a1',
+  green: '#39676c',
 };

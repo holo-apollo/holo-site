@@ -1,12 +1,14 @@
 // @flow
 import React from 'react';
 
+import palette from 'common/palette';
 import Layout, { Section } from 'containers/Layout';
 import Banners from './Banners';
 import BlockOne from './BlockOne';
 import Gallery from './Gallery';
 import BlockTwo from './BlockTwo';
 import BlockThree from './BlockThree';
+import BlockFour from './BlockFour';
 
 const HomePage = () => (
   <Layout>
@@ -24,6 +26,11 @@ const HomePage = () => (
     </Section>
     <Section>
       <BlockThree />
+    </Section>
+    <Section fullWidth={true} background={palette.green}>
+      <Section>
+        <BlockFour />
+      </Section>
     </Section>
   </Layout>
 );

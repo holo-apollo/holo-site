@@ -15,14 +15,23 @@ export const ContentCont = styled.div`
   margin-top: 70px;
 `;
 
-const getSectionStyles = ({ fullWidth }: { fullWidth: boolean }) => {
+const getSectionStyles = ({
+  fullWidth,
+  background,
+}: {
+  fullWidth: boolean,
+  background: string,
+}) => {
   if (fullWidth) {
-    return css``;
+    return css`
+      background: ${background};
+    `;
   }
   return css`
     max-width: 1300px;
     padding: 0 20px;
     margin: 0 auto;
+    background: ${background};
   `;
 };
 
@@ -32,4 +41,5 @@ export const Section = styled.div`
 
 Section.defaultProps = {
   fullWidth: false,
+  background: 'transparent',
 };

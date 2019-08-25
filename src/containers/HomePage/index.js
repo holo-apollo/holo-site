@@ -9,6 +9,7 @@ import Gallery from './Gallery';
 import BlockTwo from './BlockTwo';
 import BlockThree from './BlockThree';
 import BlockFour from './BlockFour';
+import BlockFive from './BlockFive';
 
 const HomePage = () => (
   <Layout>
@@ -31,6 +32,9 @@ const HomePage = () => (
       <Section>
         <BlockFour />
       </Section>
+    </Section>
+    <Section>
+      <BlockFive />
     </Section>
   </Layout>
 );

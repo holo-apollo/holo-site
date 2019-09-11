@@ -1,5 +1,5 @@
 // @flow
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 
 import { useTranslation, Link } from 'common/i18n';
@@ -66,7 +66,7 @@ const BlockOne = () => {
         <VisibilitySensor onChange={setVisibleOn}>
           <BottomLeftCont>
             {columns.map((column, colIndex) => (
-              <>
+              <Fragment key={column[0]}>
                 <VerticalLine visible={visible} index={colIndex} />
                 <BottomLeftColumn>
                   <BottomLeftColumnHeader>
@@ -74,6 +74,7 @@ const BlockOne = () => {
                   </BottomLeftColumnHeader>
                   {column.slice(1, column.length - 1).map((row, rowIndex) => (
                     <BottomLeftColumnItem
+                      key={row}
                       index={colIndex * (column.length - 1) + rowIndex}
                       totalItems={column.length - 1}
                       visible={visible}
@@ -91,7 +92,7 @@ const BlockOne = () => {
                     </Link>
                   </MoreLink>
                 </BottomLeftColumn>
-              </>
+              </Fragment>
             ))}
           </BottomLeftCont>
         </VisibilitySensor>

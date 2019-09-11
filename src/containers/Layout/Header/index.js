@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import { useRouter } from 'next/router';
 
 import { Link, useTranslation } from 'common/i18n';
 import Button from 'common/components/buttons/Button';
@@ -37,6 +38,14 @@ const logo1x = `${staticRoot}/img/holo-apollo-logo-transpl.png`;
 
 const Header = () => {
   const { t } = useTranslation('common');
+  const { pathname } = useRouter();
+  const menuItems = [
+    { link: getPrintingLink(), label: t('printing') },
+    { link: getDesignLink(), label: t('design') },
+    { link: getMaterialsLink(), label: t('materials') },
+    { link: getPricesLink(), label: t('prices') },
+    { link: getContactsLink(), label: t('contacts') },
+  ];
   return (
     <Cont>
       <ContentCont>
@@ -57,11 +66,11 @@ const Header = () => {
         </Link>
         <MiddleCont>
           <MenuCont>
-            <MenuItem link={getPrintingLink()}>{t('printing')}</MenuItem>
-            <MenuItem link={getDesignLink()}>{t('design')}</MenuItem>
-            <MenuItem link={getMaterialsLink()}>{t('materials')}</MenuItem>
-            <MenuItem link={getPricesLink()}>{t('prices')}</MenuItem>
-            <MenuItem link={getContactsLink()}>{t('contacts')}</MenuItem>
+            {menuItems.map(({ link, label }) => (
+              <MenuItem key={link} link={link} isActive={pathname === link}>
+                {label}
+              </MenuItem>
+            ))}
           </MenuCont>
         </MiddleCont>
         <RightCont>

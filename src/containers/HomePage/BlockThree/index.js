@@ -23,49 +23,53 @@ const BlockThree = () => {
   return (
     <Cont>
       <LeftCont>
-        <PreviewHeader>
-          {t('digitalPrinting')} {t('zoomedIn')}
-        </PreviewHeader>
-        <Preview previewUrl={`${staticRoot}/img/digital-print-preview.svg`} />
-        <PreviewHeader>
-          {t('screenPrinting')} {t('zoomedIn')}
-        </PreviewHeader>
-        <Preview previewUrl={`${staticRoot}/img/screen-print-preview.svg`} />
+        <figure>
+          <PreviewHeader>
+            {t('digitalPrinting')} {t('zoomedIn')}
+          </PreviewHeader>
+          <Preview previewUrl={`${staticRoot}/img/digital-print-preview.svg`} />
+        </figure>
+        <figure>
+          <PreviewHeader>
+            {t('screenPrinting')} {t('zoomedIn')}
+          </PreviewHeader>
+          <Preview previewUrl={`${staticRoot}/img/screen-print-preview.svg`} />
+        </figure>
       </LeftCont>
       <RightCont>
         <Table>
           <Row>
             <FirstCol />
-            <TableHead>{t('digitalPrinting')}</TableHead>
-            <TableHead>{t('screenPrinting')}</TableHead>
+            <TableHead scope="col">{t('digitalPrinting')}</TableHead>
+            <TableHead scope="col">{t('screenPrinting')}</TableHead>
           </Row>
           <Row>
-            <FirstCol>{t('printingOnDarkPaper')}</FirstCol>
+            <FirstCol scope="row">{t('printingOnDarkPaper')}</FirstCol>
             <Col>{t('no')}</Col>
             <Col>{t('yes')}</Col>
           </Row>
           <Row>
-            <FirstCol>{t('inkTexture')}</FirstCol>
+            <FirstCol scope="row">{t('inkTexture')}</FirstCol>
             <Col>{t('no')}</Col>
             <Col>{t('yes')}</Col>
           </Row>
           <Row>
-            <FirstCol>{t('sparkles')}</FirstCol>
+            <FirstCol scope="row">{t('sparkles')}</FirstCol>
             <Col>{t('no')}</Col>
             <Col>{t('yes')}</Col>
           </Row>
           <Row>
-            <FirstCol>{t('denseCardboard')}</FirstCol>
+            <FirstCol scope="row">{t('denseCardboard')}</FirstCol>
             <Col>{t('no')}</Col>
             <Col>{t('yes')}</Col>
           </Row>
           <Row>
-            <FirstCol>{t('largeCirculation')}</FirstCol>
+            <FirstCol scope="row">{t('largeCirculation')}</FirstCol>
             <Col>{t('yes')}</Col>
             <Col>{t('yes')}</Col>
           </Row>
           <Row>
-            <FirstCol>{t('fullColor')}</FirstCol>
+            <FirstCol scope="row">{t('fullColor')}</FirstCol>
             <Col>{t('yes')}</Col>
             <Col>{t('no')}</Col>
           </Row>

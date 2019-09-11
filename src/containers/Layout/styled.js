@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 import palette from 'common/palette';
 
-export const HeaderCont = styled.div`
+export const HeaderCont = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
@@ -11,7 +11,7 @@ export const HeaderCont = styled.div`
   background-color: ${palette.white};
 `;
 
-export const ContentCont = styled.div`
+export const ContentCont = styled.main`
   margin-top: 70px;
 `;
 
@@ -35,7 +35,7 @@ const getSectionStyles = ({
   `;
 };
 
-export const Section = styled.div`
+export const Section = styled.section`
   ${getSectionStyles};
 `;
 

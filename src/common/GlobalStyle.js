@@ -14,13 +14,27 @@ const GlobalStyle = createGlobalStyle`
     font-family: inherit;
   }
   
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
   
   a {
     text-decoration: none;
     color: inherit;
+  }
+  
+  figure {
+    margin: 0;
+  }
+  
+  address {
+    font-style: normal;
   }
 
   .slick-dots {

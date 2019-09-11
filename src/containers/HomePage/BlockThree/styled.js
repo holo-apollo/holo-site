@@ -11,7 +11,7 @@ export const Cont = styled.div`
 
 export const LeftCont = styled.div``;
 
-export const PreviewHeader = styled.div`
+export const PreviewHeader = styled.figcaption`
   font-size: 14px;
   line-height: 14px;
   margin-bottom: 29px;
@@ -42,10 +42,12 @@ export const TableHead = styled.th`
 
 export const Row = styled.tr``;
 
-export const FirstCol = styled.td`
+export const FirstCol = styled.th`
   width: 314px;
   border-right: 1px solid ${palette.trueBlack};
   padding-bottom: 30px;
+  font-weight: normal;
+  text-align: left;
 `;
 
 export const Col = styled.td`

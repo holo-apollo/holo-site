@@ -26,7 +26,7 @@ export const SuccessCont = styled.div`
   font-weight: bold;
 `;
 
-export const HeaderCont = styled.div`
+export const HeaderCont = styled.h3`
   text-align: center;
   font-size: 36px;
   font-weight: bold;

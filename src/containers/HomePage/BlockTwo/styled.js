@@ -1,7 +1,7 @@
 // @flow
 import styled from 'styled-components';
 
-export const HeaderCont = styled.div`
+export const HeaderCont = styled.h2`
   margin-left: calc(50vw - 630px);
   padding: 0 20px;
   margin-bottom: 41px;
@@ -24,7 +24,7 @@ export const Image = styled.img`
   width: 60%;
 `;
 
-export const TextCont = styled.div`
+export const TextCont = styled.p`
   margin-left: 132px;
   font-size: 14px;
   line-height: 18px;

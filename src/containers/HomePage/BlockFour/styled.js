@@ -17,14 +17,15 @@ export const LeftCont = styled.div`
   color: ${palette.white};
 `;
 
-export const TopTextCont = styled.div`
+export const TopTextCont = styled.p`
   max-width: 406px;
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 99px;
 `;
 
-export const BigTextCont = styled.h1`
+export const BigTextCont = styled.strong`
+  display: block;
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;

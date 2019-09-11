@@ -21,7 +21,7 @@ export const LeftCont = styled.div`
   display: flex;
 `;
 
-export const MiddleCont = styled.div`
+export const MiddleCont = styled.nav`
   display: flex;
   flex-grow: 1;
 `;
@@ -43,17 +43,18 @@ export const LeftTextCont = styled.div`
   justify-content: center;
 `;
 
-export const HoloNameCont = styled.div`
+export const HoloNameCont = styled.strong`
   font-weight: bold;
   font-size: 18px;
 `;
 
-export const HoloDescriptionCont = styled.div`
+export const HoloDescriptionCont = styled.em`
   margin-top: 3px;
   font-size: 12px;
+  font-style: normal;
 `;
 
-export const MenuCont = styled.div`
+export const MenuCont = styled.ul`
   display: flex;
   flex-grow: 1;
 
@@ -64,7 +65,7 @@ export const MenuCont = styled.div`
 `;
 
 const getMenuItemContStyles = ({ isActive }: { isActive: boolean }) => css`
-  ${isActive && `border-top: solid 5px ${palette.blue}`};
+  ${isActive && `color: ${palette.blue}`};
 `;
 
 export const MenuItemCont = styled.span`

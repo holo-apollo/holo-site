@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import palette from 'common/palette';
 
-export const Cont = styled.div`
+export const Cont = styled.footer`
   background-color: ${palette.darkPink};
 `;
 
@@ -40,7 +40,7 @@ export const ContactsCont = styled.div`
   margin: 38px 0 37px;
 `;
 
-export const ContactsItemCont = styled.div`
+export const ContactsItemCont = styled.address`
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
@@ -59,10 +59,13 @@ export const CopyrightCont = styled.div`
   line-height: 12px;
 `;
 
-export const MenuCont = styled.div`
-  display: flex;
+export const MenuWrapper = styled.nav`
   flex-grow: 1;
   margin-top: 44px;
+`;
+
+export const MenuCont = styled.ul`
+  display: flex;
 
   & > * {
     flex-grow: 1;

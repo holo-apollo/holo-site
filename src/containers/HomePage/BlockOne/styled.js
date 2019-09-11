@@ -8,14 +8,14 @@ export const TopCont = styled.div`
   margin-bottom: 74px;
 `;
 
-export const HeaderTextCont = styled.div`
+export const HeaderTextCont = styled.h1`
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
   margin-bottom: 25px;
 `;
 
-export const SubTextCont = styled.div`
+export const SubTextCont = styled.p`
   font-size: 14px;
   line-height: 18px;
 `;
@@ -48,12 +48,12 @@ export const VerticalLine = styled.div`
   ${getVerticalLineStyles};
 `;
 
-export const BottomLeftColumn = styled.div`
+export const BottomLeftColumn = styled.ul`
   width: 328px;
   padding-left: 54px;
 `;
 
-export const BottomLeftColumnHeader = styled.div`
+export const BottomLeftColumnHeader = styled.h3`
   margin: 28px 0 46px;
   font-weight: bold;
   font-size: 36px;
@@ -76,7 +76,7 @@ const getBottomLeftColumnItemStyles = ({
   `;
 };
 
-export const BottomLeftColumnItem = styled.div`
+export const BottomLeftColumnItem = styled.li`
   font-size: 14px;
   line-height: 24px;
   ${getBottomLeftColumnItemStyles};

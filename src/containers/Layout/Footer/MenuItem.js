@@ -10,11 +10,13 @@ type Props = {
 };
 
 const MenuItem = ({ link, children }: Props) => (
-  <Link href={link}>
-    <a>
-      <MenuItemCont>{children}</MenuItemCont>
-    </a>
-  </Link>
+  <li>
+    <Link href={link}>
+      <a>
+        <MenuItemCont>{children}</MenuItemCont>
+      </a>
+    </Link>
+  </li>
 );
 
 export default MenuItem;

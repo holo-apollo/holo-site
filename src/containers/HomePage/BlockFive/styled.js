@@ -7,7 +7,7 @@ export const TopCont = styled.div`
   margin-top: 60px;
 `;
 
-export const TopLeftCont = styled.div`
+export const TopLeftCont = styled.p`
   width: 439px;
   font-size: 14px;
   line-height: 18px;
@@ -43,7 +43,7 @@ const getColumnContStyles = ({
   transition: height 0.5s ease-in ${index * 1.6}s;
 `;
 
-export const ColumnCont = styled.div`
+export const ColumnCont = styled.section`
   flex-grow: 1;
   flex-basis: 0;
   height: 650px;
@@ -90,7 +90,7 @@ const getColumnHeaderContStyles = ({
   transition: opacity 0.3s ease-in ${index * 1.6 + 0.5}s;
 `;
 
-export const ColumnHeaderCont = styled.h1`
+export const ColumnHeaderCont = styled.h3`
   margin-bottom: 30px;
   font-weight: bold;
   font-size: 36px;
@@ -109,7 +109,7 @@ const getColumnDescriptionContStyles = ({
   transition: opacity 0.3s ease-in ${index * 1.6 + 0.8}s;
 `;
 
-export const ColumnDescriptionCont = styled.div`
+export const ColumnDescriptionCont = styled.p`
   font-size: 14px;
   line-height: 18px;
   ${getColumnDescriptionContStyles};

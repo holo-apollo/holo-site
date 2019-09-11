@@ -20,6 +20,7 @@ import {
   ContactsCont,
   ContactsItemCont,
   CopyrightCont,
+  MenuWrapper,
   MenuCont,
   Logo,
 } from './styled';
@@ -56,13 +57,15 @@ const Footer = () => {
           </ContactsCont>
           <CopyrightCont>© 2019 Holo Apollo Art {t('copyright')}</CopyrightCont>
         </LeftCont>
-        <MenuCont>
-          <MenuItem link={getPrintingLink()}>{t('printing')}</MenuItem>
-          <MenuItem link={getDesignLink()}>{t('design')}</MenuItem>
-          <MenuItem link={getMaterialsLink()}>{t('materials')}</MenuItem>
-          <MenuItem link={getPricesLink()}>{t('prices')}</MenuItem>
-          <MenuItem link={getContactsLink()}>{t('contacts')}</MenuItem>
-        </MenuCont>
+        <MenuWrapper>
+          <MenuCont>
+            <MenuItem link={getPrintingLink()}>{t('printing')}</MenuItem>
+            <MenuItem link={getDesignLink()}>{t('design')}</MenuItem>
+            <MenuItem link={getMaterialsLink()}>{t('materials')}</MenuItem>
+            <MenuItem link={getPricesLink()}>{t('prices')}</MenuItem>
+            <MenuItem link={getContactsLink()}>{t('contacts')}</MenuItem>
+          </MenuCont>
+        </MenuWrapper>
         <RightCont>
           <Logo src={`${staticRoot}/img/holo-apollo-logo.png`} alt="logo" />
         </RightCont>

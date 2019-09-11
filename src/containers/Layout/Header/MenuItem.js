@@ -11,11 +11,13 @@ type Props = {
 };
 
 const MenuItem = ({ link, isActive, children }: Props) => (
-  <Link href={link}>
-    <a>
-      <MenuItemCont isActive={isActive}>{children}</MenuItemCont>
-    </a>
-  </Link>
+  <li>
+    <Link href={link}>
+      <a>
+        <MenuItemCont isActive={isActive}>{children}</MenuItemCont>
+      </a>
+    </Link>
+  </li>
 );
 
 MenuItem.defaultProps = {

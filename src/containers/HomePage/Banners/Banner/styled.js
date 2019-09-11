@@ -33,7 +33,7 @@ export const TextCont = styled.div`
   justify-content: center;
 `;
 
-export const HeaderTextCont = styled.div`
+export const HeaderTextCont = styled.h2`
   font-weight: bold;
   font-size: 72px;
   line-height: 72px;
@@ -41,7 +41,7 @@ export const HeaderTextCont = styled.div`
   margin-bottom: 21px;
 `;
 
-export const SubTextCont = styled.div`
+export const SubTextCont = styled.p`
   font-size: 14px;
   line-height: 18px;
   width: 50%;

@@ -30,7 +30,7 @@ type Props = {
 
 type Image = {
   file: File,
-  previewUrl: string | ArrayBuffer,
+  previewUrl: $PropertyType<FileReader, 'result'>,
 };
 
 const ImageUploadPreview = (props: Props) => {

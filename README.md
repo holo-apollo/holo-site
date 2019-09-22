@@ -20,7 +20,6 @@ This is the project for UI code of https://www.holo-apollo.art.
 
 ## TODO
 
-- Migrate to typescript
 - Try using react-helmet-async to fix the deprecation warning
 - Use Yup schemas for validation
 - Use react-testing-library

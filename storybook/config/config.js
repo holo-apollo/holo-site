@@ -11,7 +11,7 @@ import theme from 'common/theme';
 const componentsReq = require.context(
   '../../src/',
   true,
-  /stories\/.*\.stories\.js$/
+  /stories\/.*\.stories\.tsx$/
 );
 
 function loadStories() {

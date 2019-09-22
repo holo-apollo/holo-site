@@ -1,14 +1,18 @@
 {
     "extends": [
         "plugin:prettier/recommended",
-        "prettier/flowtype",
+        "plugin:@typescript-eslint/recommended",
         "prettier/react"
     ],
     "env": {
         "browser": true,
         "node": true
     },
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "sourceType": "module"
+    },
     "rules": {
         "prettier/prettier": [1, {
             "singleQuote": true,
@@ -29,12 +33,15 @@
         "no-unused-vars": 1,
         "no-console": 1,
         "react-hooks/rules-of-hooks": 2,
-        "react-hooks/exhaustive-deps": 1
+        "react-hooks/exhaustive-deps": 1,
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/ban-ts-ignore": 0,
+        "@typescript-eslint/explicit-function-return-type": 0
     },
     "plugins": [
         "babel",
+        "@typescript-eslint",
         "react",
-        "flowtype",
         "prettier",
         "react-hooks"
     ]

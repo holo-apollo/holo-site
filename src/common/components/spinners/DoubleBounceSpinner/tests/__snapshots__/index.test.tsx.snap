@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DoubleBounceSpinner should match snapshot 1`] = `
+<div
+  className="DoubleBounceSpinner__Spinner-sc-1ud9uuk-0 kTFIou"
+  size={40}
+>
+  <div
+    className="DoubleBounceSpinner__DoubleBounce-sc-1ud9uuk-1 fkedRl"
+    color="#1ad4e0"
+  />
+  <div
+    className="DoubleBounceSpinner__DoubleBounce-sc-1ud9uuk-1 iuJrnd"
+    color="#1ad4e0"
+  />
+</div>
+`;

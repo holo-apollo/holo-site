@@ -40,7 +40,7 @@
     "formik": "^1.5.8",
     "hoist-non-react-statics": "^3.3.0",
     "jss": "^9.8.7",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "next": "^9.0.3",
     "next-i18next": "^0.54.0",
     "normalizr": "^3.4.1",

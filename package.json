@@ -41,7 +41,7 @@
     "hoist-non-react-statics": "^3.3.0",
     "jss": "^9.8.7",
     "lodash": "^4.17.15",
-    "next": "^9.0.3",
+    "next": "^11.1.0",
     "next-i18next": "^0.54.0",
     "normalizr": "^3.4.1",
     "ramda": "^0.26.1",

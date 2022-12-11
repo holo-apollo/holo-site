@@ -36,7 +36,7 @@
     "apisauce": "^1.0.3",
     "dotenv": "^6.2.0",
     "emoji-mart": "^2.9.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "formik": "^1.5.8",
     "hoist-non-react-statics": "^3.3.0",
     "jss": "^9.8.7",
